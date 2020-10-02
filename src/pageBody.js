@@ -1,2 +1,0 @@
-import { allProjects } from './utils'
-

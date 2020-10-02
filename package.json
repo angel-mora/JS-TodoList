@@ -18,6 +18,9 @@
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
-    "date-fns": "^2.16.1"
+    "css-loader": "^4.3.0",
+    "date-fns": "^2.16.1",
+    "file-loader": "^6.1.0",
+    "style-loader": "^1.2.1"
   }
 }
