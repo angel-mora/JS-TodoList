@@ -23,7 +23,7 @@ const dummyProject = {
   ]
 }
 
-const allProjects = [dummyProject]
+const allProjects = [dummyProject, dummyProject]
 
 
 export {
