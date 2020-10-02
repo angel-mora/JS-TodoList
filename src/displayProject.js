@@ -2,7 +2,11 @@
 const loopTodos = (todos, index) => {
   let tableBody = document.querySelector(`#todos${index}`);
 
-  for (let todo of todos) {
+  const sortedTodo = todos.sort((a, b) => {
+     return b.priority - a.priority
+  })
+
+  for (let todo of sortedTodo) {
     tableBody.innerHTML += `
     <tr>
       <td class='mx-4'>${todo.title}</td>
@@ -26,7 +30,7 @@ const projectCard = (accordion, project, index) => {
         </h2>
       </div>
 
-      <div id="collapse${index}" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+      <div id="collapse${index}" class="collapse ${index == 0 ? 'show' : ''}" aria-labelledby="headingOne" data-parent="#accordionExample">
         <div class="card-body">
           <table class="table table-dark">
             <thead>
