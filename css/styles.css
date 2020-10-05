@@ -7,3 +7,14 @@
 *:focus {
   outline: none !important;
 }
+
+.todoHeader {
+  display: flex !important;
+  justify-content: space-between !important;
+  width: 100% !important;
+  color: red!important;
+}
+
+.addTodoBtn {
+  margin-left: 45%;
+}
