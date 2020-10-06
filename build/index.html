@@ -9,8 +9,28 @@
 </head>
 <body>
   <h2 class="text-center my-4">TODO LIST</h2>
-  <div class="text-right mb-3" style="width: 85%;">
-    <button class="btn btn-primary">Add Project</button>
+  <div class="text-right mb-3" style="width: 85%;" id="newProjectZone">
+    <button class="btn btn-primary" data-toggle="modal" data-target="#newProjectModal">Add Project</button>
+    <div class="modal fade" id="newProjectModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">NEW PROJECT</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <form class="modal-body">
+            <div class="form-group">
+              <input type="text" class="form-control" id="projectTitle" placeholder="Enter project title" name="projectTitle">
+            </div>
+          </form>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" id="btnNewProject">Create Project</button>
+          </div>
+        </div>
+      </div>
+    </div> 
   </div>
 
   <div class="accordion ml-auto mr-auto" id="accordionExample" style="width: 70%;"></div>

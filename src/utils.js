@@ -1,3 +1,5 @@
+import { displayProjects } from './displayProject'
+
 const dummyProject = {
   name: "Do dummy",
   list:
@@ -23,9 +25,16 @@ const dummyProject = {
   ]
 }
 
-const allProjects = [dummyProject, dummyProject]
+const allProjects = [dummyProject, dummyProject];
+
+const renderProjects = () => {
+  
+  const projects = JSON.parse(localStorage.getItem('allProjects'));
+  
+}
+
 
 
 export {
-  allProjects
+  allProjects, renderProjects
 }

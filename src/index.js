@@ -1,10 +1,13 @@
 import '../css/styles.css'
-import { allProjects } from './utils'
+import { renderProjects, allProjects } from './utils'
 import { displayProjects } from './displayProject'
+import createProject from './components/newProject'
 
-const stringifiedProjects = JSON.stringify(allProjects);
-localStorage.setItem('allProjects', stringifiedProjects);
 const projects = JSON.parse(localStorage.getItem('allProjects'));
+if (projects) {
+  displayProjects(projects);
+} else {
+  displayProjects(allProjects);
+}  
 
-
-displayProjects(projects);
+createProject();
