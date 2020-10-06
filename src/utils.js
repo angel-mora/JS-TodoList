@@ -27,10 +27,17 @@ const dummyProject = {
 
 const allProjects = [dummyProject, dummyProject];
 
+
 const renderProjects = () => {
-  
   const projects = JSON.parse(localStorage.getItem('allProjects'));
-  
+
+  if (projects) {
+    displayProjects(projects);
+  } else {
+    displayProjects(allProjects);
+    const stringifiedProjects = JSON.stringify(allProjects);
+    localStorage.setItem('allProjects', stringifiedProjects);
+  }
 }
 
 

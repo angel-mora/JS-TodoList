@@ -1,6 +1,5 @@
 import Project from '../Project'
 import { renderProjects, allProjects } from '../utils'
-import { displayProjects } from '../displayProject'
 
 
 const createProject = () => {
@@ -8,12 +7,20 @@ const createProject = () => {
   const btnNewProject = document.querySelector('#btnNewProject');
 
   btnNewProject.addEventListener('click', () => {
-    new Project(projectTitle.value);
+    const newProject = new Project(projectTitle.value);
 
-    const stringifiedProjects = JSON.stringify(allProjects);
-    localStorage.setItem('allProjects', stringifiedProjects);
-    
-    projectTitle.value = ''
+    const storedProjects = JSON.parse(localStorage.getItem('allProjects'));
+    if (storedProjects) {
+      storedProjects.push(newProject);
+      const stringifiedProjects = JSON.stringify(storedProjects);
+      localStorage.setItem('allProjects', stringifiedProjects);
+    }
+    else {
+      allProjects.push(newProject)
+    }
+
+    renderProjects();
+    projectTitle.value = '';
   })
 }
 
