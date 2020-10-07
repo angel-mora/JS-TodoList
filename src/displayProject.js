@@ -17,7 +17,7 @@ const theTodos = (todosAccord, todo, todoIndex, projIndex) => {
         <p>Description: ${todo.description}</p>
         <p>Priority: ${todo.priority}</p>
         <button class="btn btn-warning">Edit</button>
-        <button class="btn btn-danger dltBtn" id="${projIndex}${todoIndex}">Delete</button>
+        <button class="btn btn-danger dltBtn" id="${projIndex}">Delete</button>
       </div>
     </div>
   </div>
