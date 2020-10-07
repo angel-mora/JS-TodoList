@@ -1,4 +1,5 @@
 import { displayProjects } from './displayProject'
+import { format } from 'date-fns'
 
 const dummyProject = {
   name: "Do dummy",
@@ -7,19 +8,19 @@ const dummyProject = {
     {
     title: "Do 20 Squats before breakfast",
     description: "I need squats to .... Lorem ipsim jseft yug huger serdagh montergh dergrats",
-    dueDate: 12102020,
+    dueDate: format(new Date(2020, 8, 11), 'dd/MM/yyyy'),
     priority: 2
   },
   {
     title: "Do 20 pushups after breakfast",
     description: "Pushups are good for strength and cardio .... Lorem ipsim jseft yug huger serdagh montergh dergrats",
-    dueDate: 12102020,
+    dueDate: format(new Date(2020, 9, 11), 'dd/MM/yyyy'),
     priority: 1
   },
   {
     title: "Do planks for 3 min after work",
     description: "Planks are great for the circuit .... Lorem ipsim jseft yug huger serdagh montergh dergrats",
-    dueDate: 12102020,
+    dueDate: format(new Date(2020, 10, 11), 'dd/MM/yyyy'),
     priority: 3
   }
   ]
@@ -39,8 +40,6 @@ const renderProjects = () => {
     localStorage.setItem('allProjects', stringifiedProjects);
   }
 }
-
-
 
 export {
   allProjects, renderProjects

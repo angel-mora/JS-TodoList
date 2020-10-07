@@ -1,7 +1,6 @@
 import Project from '../Project'
 import { renderProjects, allProjects } from '../utils'
 
-
 const createProject = () => {
   const projectTitle = document.querySelector('#projectTitle');
   const btnNewProject = document.querySelector('#btnNewProject');

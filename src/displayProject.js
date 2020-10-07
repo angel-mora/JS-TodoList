@@ -60,25 +60,33 @@ const projectCard = (accordion, project, projIndex) => {
         </div>
         <div class="text-center mb-3">
           <button class="btn btn-primary" data-toggle="modal" data-target="#newTodoModal${projIndex}">Add Todo</button>
-          <div class="modal fade" id="newTodoModal${projIndex}" tabindex="-1" aria-labelledby="newTodoModal" aria-hidden="true">
+          
+          <div class="modal fade" id="newTodoModal${projIndex}" tabindex="-1">
             <div class="modal-dialog">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h5 class="modal-title" id="newTodoModal">NEW TODO</h5>
+                  <h5 class="modal-title">NEW TODO</h5>
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
+
                 <form class="modal-body">
                   <div class="form-group">
-                    <input type="text" class="form-control" id="todoTitle" placeholder="Enter Todo Title" name="todoTitle">
-                    <input type="text" class="form-control my-1" id="description" placeholder="Enter Description" name="description">
-                    <input type="date" class="form-control" id="dueDate" placeholder="select Due date" name="dueDate">
-                    <input type="text" class="form-control my-1" id="priority" placeholder="Enter todo Priority" name="priority">
+                    <input type="text" class="form-control" id="todoTitle${projIndex}" placeholder="Enter Todo Title" name="todoTitle">
+                    <input type="text" class="form-control my-1" id="description${projIndex}" placeholder="Enter Description" name="description">
+                    <input type="date" class="form-control" id="dueDate${projIndex}" placeholder="select Due date" name="dueDate">
+                    <select class="custom-select custom-select-md my-1 form-control" id="priority${projIndex}" name="priority">
+                      <option selected>Select Priority</option>
+                      <option value="1">Low</option>
+                      <option value="2">Medium</option>
+                      <option value="3">High</option>
+                    </select>
                   </div>
                 </form>
+
                 <div class="modal-footer">
-                  <button type="button" class="btn btn-primary" id="btnNewTodo">Create Todo</button>
+                  <button type="button" class="btn btn-primary btnNewTodo">Create Todo</button>
                 </div>
               </div>
             </div>
