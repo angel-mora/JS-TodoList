@@ -63,7 +63,7 @@ const editTodo = () => {
 
       renderProjects();
 
-      window.location = '/build/index.html';
+      window.location = '*/index.html';
     });
   });
 };
