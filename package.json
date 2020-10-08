@@ -7,7 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack --mode=development --watch",
     "build": "webpack --mode=production",
-    "start": "webpack-dev-server --mode development --open --hot"
+    "start": "webpack-dev-server --mode development --open --hot",
+    "eslint": "./node_modules/.bin/eslint ./src/**.*js ./src/components/**.*js",
+    "eslint-fix": "./node_modules/.bin/eslint ./src/**.*js ./src/components/**.*js ./webpack.config.js --fix"
   },
   "keywords": [],
   "author": "",
