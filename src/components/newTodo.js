@@ -16,9 +16,9 @@ export const createTodo = () => {
       
       let date = dueDate.value.split('-');
         date = date.map((item)=> parseInt(item));
-      const formatedDate = format(new Date(date[0], date[1], date[2]), 'dd/MM/yyyy');
+      const formatedDate = format(new Date(date[0], date[1], date[2]), 'yyyy/MM/dd');
 
-      const newTodo =  new Todo(todoTitle.value, description.value, formatedDate, priority.value);
+      const newTodo =  new Todo(todoTitle.value, description.value, formatedDate, parseInt(priority.value));
       allProjects[index]['list'].push(newTodo);
 
       localStorage.setItem('allProjects', JSON.stringify(allProjects));

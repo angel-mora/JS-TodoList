@@ -18,3 +18,13 @@
 .addTodoBtn {
   margin-left: 45%;
 }
+
+.project-accordon {
+  width: 70%;
+}
+
+@media (max-width: 768px) {
+  .project-accordon {
+    width: 97%;
+  }
+}

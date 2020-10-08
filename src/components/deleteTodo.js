@@ -10,8 +10,8 @@ export const deleteTodo = () => {
       
       const todos = allProjects[projID]['list'];
       const sortedTodos = todos.sort((a, b) => {
-        return b.priority - a.priority
-     })
+        return b.priority - a.priority;
+     });
       
       sortedTodos.splice(index, 1);
       allProjects[projID]['list'] = sortedTodos;

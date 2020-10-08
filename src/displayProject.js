@@ -1,5 +1,20 @@
 import '../css/styles.css'
 
+const renderPriorityText = (int) => {
+  switch(int) {
+    case 1:
+      return 'Low'
+      break;
+    case 2:
+      return 'Medium';
+      break;
+    case 3:
+      return 'High';
+      break;
+      default:
+        return 'High';
+  }
+}
 const theTodos = (todosAccord, todo, todoIndex, projIndex) => {
   todosAccord.innerHTML += `
   <div class="card">
@@ -15,11 +30,11 @@ const theTodos = (todosAccord, todo, todoIndex, projIndex) => {
     <div id="todo${todoIndex}" class="collapse" data-parent="#todos${projIndex}">
       <div class="card-body">
         <p>Description: ${todo.description}</p>
-        <p>Priority: ${todo.priority}</p>
-        <button class="btn btn-warning editBtn" data-toggle="modal" data-target="#editTodoModal${projIndex}">Edit</button>
+        <p>Priority: ${renderPriorityText(todo.priority)}</p>
+        <button class="btn btn-warning editBtn" id="${projIndex}${todoIndex}" data-toggle="modal" data-target="#editTodoModal${projIndex}${todoIndex}">Edit</button>
 
 
-          <div class="modal fade" id="editTodoModal${projIndex}" tabindex="-1">
+          <div class="modal fade" id="editTodoModal${projIndex}${todoIndex}" tabindex="-1">
             <div class="modal-dialog">
               <div class="modal-content">
                 <div class="modal-header">
@@ -31,10 +46,10 @@ const theTodos = (todosAccord, todo, todoIndex, projIndex) => {
 
                 <form class="modal-body">
                   <div class="form-group">
-                    <input type="text" class="form-control" id="todoTitle${projIndex}" placeholder="Enter Todo Title" name="todoTitle">
-                    <input type="text" class="form-control my-1" id="description${projIndex}" placeholder="Enter Description" name="description">
-                    <input type="date" class="form-control" id="dueDate${projIndex}" placeholder="select Due date" name="dueDate">
-                    <select class="custom-select custom-select-md my-1 form-control" id="priority${projIndex}" name="priority">
+                    <input type="text" class="form-control" id="editTitle${projIndex}${todoIndex}" placeholder="Enter Todo Title" name="todoTitle">
+                    <input type="text" class="form-control my-1" id="editDesc${projIndex}${todoIndex}" placeholder="Enter Description" name="description">
+                    <input type="date" class="form-control" id="editDate${projIndex}${todoIndex}" placeholder="select Due date" name="dueDate">
+                    <select class="custom-select custom-select-md my-1 form-control" id="editPriority${projIndex}${todoIndex}" name="priority">
                       <option selected>Select Priority</option>
                       <option value="1">Low</option>
                       <option value="2">Medium</option>
@@ -43,13 +58,11 @@ const theTodos = (todosAccord, todo, todoIndex, projIndex) => {
                   </div>
                 </form>
                 <div class="modal-footer">
-                  <button type="button" class="btn btn-primary btnEditTodo">Update Todo</button>
+                  <button type="button" class="btn btn-primary btnEditTodo" id="${projIndex}${todoIndex}u">Update Todo</button>
                 </div>
               </div>
             </div>
           </div>
-
-
 
 
         <button class="btn btn-danger dltBtn" id="${projIndex}">Delete</button>
