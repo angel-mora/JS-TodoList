@@ -63,7 +63,7 @@ const editTodo = () => {
 
       renderProjects();
 
-      window.location = '*/index.html';
+      window.location = 'https://rawcdn.githack.com/SmithVyne/JS-TodoList/chore/deploy/build/index.html';
     });
   });
 };
