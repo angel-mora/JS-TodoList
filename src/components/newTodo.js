@@ -27,5 +27,4 @@ export const createTodo = () => {
       location.reload();
     });
   })
-
 }  

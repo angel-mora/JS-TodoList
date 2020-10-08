@@ -65,7 +65,7 @@ const theTodos = (todosAccord, todo, todoIndex, projIndex) => {
           </div>
 
 
-        <button class="btn btn-danger dltBtn" id="${projIndex}">Delete</button>
+        <button class="btn btn-danger dltBtn" id="${projIndex}${todoIndex}D">Delete</button>
       </div>
     </div>
   </div>
