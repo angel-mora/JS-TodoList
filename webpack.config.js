@@ -4,7 +4,7 @@ const path = require('path');
 module.exports = {
   entry: './src/index.js',
   output: {
-    filename: 'complete.js',
+    filename: 'main.js',
     path: path.resolve(__dirname, 'build'),
   },
   watch: true,

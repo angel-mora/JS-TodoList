@@ -1,20 +1,17 @@
-import '../css/styles.css'
+import '../css/styles.css';
 
 const renderPriorityText = (int) => {
-  switch(int) {
+  switch (int) {
     case 1:
-      return 'Low'
-      break;
+      return 'Low';
     case 2:
       return 'Medium';
-      break;
     case 3:
       return 'High';
-      break;
-      default:
-        return 'High';
+    default:
+      return 'High';
   }
-}
+};
 const theTodos = (todosAccord, todo, todoIndex, projIndex) => {
   todosAccord.innerHTML += `
   <div class="card">
@@ -69,23 +66,21 @@ const theTodos = (todosAccord, todo, todoIndex, projIndex) => {
       </div>
     </div>
   </div>
-  `
+  `;
 };
 
 const loopTodos = (todos, projIndex) => {
-  let todosAccord = document.querySelector(`#todos${projIndex}`);
+  const todosAccord = document.querySelector(`#todos${projIndex}`);
 
-  const sortedTodo = todos.sort((a, b) => {
-     return b.priority - a.priority
-  })
-  
+  const sortedTodo = todos.sort((a, b) => b.priority - a.priority);
+
   sortedTodo.forEach((todo, todoIndex) => {
     theTodos(todosAccord, todo, todoIndex, projIndex);
   });
 };
 
 const projectCard = (accordion, project, projIndex) => {
-  let todos = project.list;
+  const todos = project.list;
 
   accordion.innerHTML += `
     <div class="card">
@@ -97,7 +92,7 @@ const projectCard = (accordion, project, projIndex) => {
         </h2>
       </div>
 
-      <div id="collapse${projIndex}" class="collapse ${projIndex == 0 ? 'show' : ''}" data-parent="#accordionExample">
+      <div id="collapse${projIndex}" class="collapse ${projIndex === 0 ? 'show' : ''}" data-parent="#accordionExample">
         <div class="card-body">
 
           <!--Todo Starts here -->
@@ -143,11 +138,10 @@ const projectCard = (accordion, project, projIndex) => {
         </div>
       </div>
     </div>
-    `
+    `;
 
   loopTodos(todos, projIndex);
 };
-
 
 const displayProjects = (projects) => {
   const accordion = document.querySelector('#accordionExample');
@@ -158,4 +152,4 @@ const displayProjects = (projects) => {
   });
 };
 
-export { displayProjects }
+export default displayProjects;
