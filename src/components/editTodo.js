@@ -63,7 +63,7 @@ const editTodo = () => {
 
       renderProjects();
 
-      location = 'https://www.google.com/';
+      location = 'https://raw.githack.com/SmithVyne/JS-TodoList/chore/deploy/build/index.html';
     });
   });
 };
