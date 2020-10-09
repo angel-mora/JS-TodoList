@@ -5,7 +5,7 @@ This is a todo list app built with JavaScript, bootstrap, HTML/CSS and Webpack. 
   ![image](https://user-images.githubusercontent.com/46686100/95511233-17505700-09af-11eb-8221-ad79033be826.png)
   
 ## Live Version
-  - The project is deployed on netlify [here](//)
+  - The project is deployed [here](https://smithvyne.github.io/JS-TodoList/).
 
 ## Technologies
   - [Webpack](https://webpack.js.org/)
