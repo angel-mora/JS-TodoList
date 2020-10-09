@@ -5,19 +5,33 @@
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "webpack --mode development",
+    "dev": "webpack --mode=development --watch",
     "build": "webpack --mode production",
-    "start": "webpack-dev-server --open"
+    "start": "webpack-dev-server --mode development --open --hot",
+    "eslint": "./node_modules/.bin/eslint ./src/**.*js ./src/components/**.*js",
+    "eslint-fix": "./node_modules/.bin/eslint ./src/**.*js ./src/components/**.*js ./webpack.config.js --fix",
+    "stylelint": "npx stylelint **/*.{css,scss}",
+    "stylelint-fix": "npx stylelint **/*.{css,scss} --fix"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "eslint": "^7.10.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "stylelint": "^13.7.2",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-csstree-validator": "^1.8.0",
+    "stylelint-scss": "^3.18.0",
     "webpack": "^4.44.2",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
-    "date-fns": "^2.16.1"
+    "css-loader": "^4.3.0",
+    "date-fns": "^2.16.1",
+    "file-loader": "^6.1.0",
+    "style-loader": "^1.2.1"
   }
 }
