@@ -63,7 +63,7 @@ const editTodo = () => {
 
       renderProjects();
 
-      location = location.href;
+      location = 'https://www.google.com/';
     });
   });
 };
