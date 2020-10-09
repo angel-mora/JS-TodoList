@@ -19,6 +19,8 @@ const createProject = () => {
 
     renderProjects();
     projectTitle.value = '';
+
+    location = location.href;
   });
 };
 

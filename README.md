@@ -19,7 +19,7 @@ Follow the steps below to test the project locally. First ensure you have a vers
 1. Clone the repository from a terminal `https://github.com/SmithVyne/JS-TodoList.git`.
 2. Navigate to the project directory `cd JS-TodoList`.
 3. Install project dependencies `npm install`
-4. Run `npm run webpack` to compile a development build.
+4. Run `npm run dev` to compile a development build.
 5. Run `npm run start` to serve the project live on `http://localhost:9000` and voila!!!.
 
 
