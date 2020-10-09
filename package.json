@@ -12,7 +12,6 @@
     "eslint-fix": "./node_modules/.bin/eslint ./src/**.*js ./src/components/**.*js ./webpack.config.js --fix",
     "stylelint": "npx stylelint **/*.{css,scss}",
     "stylelint-fix": "npx stylelint **/*.{css,scss} --fix"
-
   },
   "keywords": [],
   "author": "",
